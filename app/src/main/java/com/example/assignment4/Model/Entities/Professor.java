@@ -1,4 +1,4 @@
-package com.example.assignment4;
+package com.example.assignment4.Model.Entities;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,16 +7,31 @@ import androidx.room.PrimaryKey;
 public class Professor {
     @PrimaryKey(autoGenerate = true)
     private int professorId;
-    private String firstname,lastname,department,password;
+    private String firstname, lastname, department, password;
 
-    public int getProfessorID() {return professorId; }
+    public Professor(String firstname, String lastname, String department, String password) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.department = department;
+        this.password = password;
+    }
+
+    public int getProfessorID() {
+        return professorId;
+    }
+
     public void setProfessorID(int id) {
         this.professorId = id;
     }
+
     public String getFirstname() {
         return firstname;
     }
-    public void setFirstname(String fname) {this.firstname = fname;}
+
+    public void setFirstname(String fname) {
+        this.firstname = fname;
+    }
+
     public String getLastname() {
         return lastname;
     }
