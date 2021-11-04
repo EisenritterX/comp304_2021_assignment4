@@ -1,4 +1,4 @@
-package com.example.assignment4;
+package com.example.assignment4.Activities;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.assignment4.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
