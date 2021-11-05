@@ -26,7 +26,7 @@ public interface StudentDao {
     void deleteAllStudents();
 
     @Query("select * from Student order by studentId")
-    LiveData<List<Student>> getAllPerson();
+    LiveData<List<Student>> getAllStudents();
 
     @Query("select * from Student where studentId=:stuID")
     LiveData<Student> DisplayStudent(int stuID);
