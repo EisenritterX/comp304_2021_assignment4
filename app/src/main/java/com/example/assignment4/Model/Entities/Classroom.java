@@ -16,6 +16,8 @@ public class Classroom {
         this.airconditioned = airconditioned;
     }
 
+
+
     // Getters & Setters
     public int getClassroomId() {
         return classroomId;
@@ -44,7 +46,7 @@ public class Classroom {
     public void setFloor(int floornum) {
         this.floor = floornum;
     }
-    public boolean getAirConditioned() {
+    public boolean isAirconditioned() {
         return airconditioned;
     }
     public void setAirconditioned(boolean ac) {

@@ -9,19 +9,22 @@ public class Professor {
     private int professorId;
     private String firstname, lastname, department, password;
 
-    public Professor(String firstname, String lastname, String department, String password) {
+
+
+    public Professor(int professorId, String firstname, String lastname, String department, String password) {
+        this.professorId = professorId;
         this.firstname = firstname;
         this.lastname = lastname;
         this.department = department;
         this.password = password;
     }
 
-    public int getProfessorID() {
+    public int getProfessorId() {
         return professorId;
     }
 
-    public void setProfessorID(int id) {
-        this.professorId = id;
+    public void setProfessorId(int professorId) {
+        this.professorId = professorId;
     }
 
     public String getFirstname() {

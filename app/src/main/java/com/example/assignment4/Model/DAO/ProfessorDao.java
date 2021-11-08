@@ -1,6 +1,7 @@
 package com.example.assignment4.Model.DAO;
 
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -30,4 +31,7 @@ public interface ProfessorDao {
 
     @Query("select * from Professor where professorId=:profID")
     LiveData<Professor> DisplayProf(int profID);
+
+    @Query("select * from Professor where professorId=:profID and password =:profPass")
+    MutableLiveData<Professor> ProfLogin(int profID, String profPass);
 }

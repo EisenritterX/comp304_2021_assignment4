@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Assignment 4</string>
+    <string name="lblLogin">Login ID:</string>
+    <string name="lblPassword">Password:</string>
+    <string name="btnLogin">Login</string>
     <string-array name="Activities">
         <item>Login</item>
         <item>Modify Student Info</item>

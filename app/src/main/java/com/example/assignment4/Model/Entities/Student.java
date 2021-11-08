@@ -16,21 +16,22 @@ public class Student {
         this.department = department;
     }
 
-    public int getStudentID() {
-        return studentId;
+    public void setStudentId(int studentId) {
+        this.studentId = studentId;
     }
 
-    public void setStudentID(int id) {
-        this.studentId = id;
-    }
-
-    public int getProfessorID() {
+    public int getProfessorId() {
         return professorId;
     }
 
-    public void setProfessorID(int id) {
-        this.professorId = id;
+    public void setProfessorId(int professorId) {
+        this.professorId = professorId;
     }
+
+    public int getStudentId() {
+        return studentId;
+    }
+
 
     public int getClassroomId() {
         return classroomId;

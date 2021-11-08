@@ -53,7 +53,8 @@ public class MainActivity extends AppCompatActivity {
                 // Sent Intent
                 switch (position) {
                     case 0:
-                        intent = new Intent(getApplicationContext(), ClassroomActivity.class);
+                        intent = new Intent(getApplicationContext(), LoginActivity.class);
+                        startActivity(intent);
                         break;
                     case 1:
                         intent = new Intent(getApplicationContext(), StudentActivity.class);
@@ -73,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                     default:
                         break;
                 }
+
             }
         });
 
