@@ -5,6 +5,7 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import com.example.assignment4.Model.COM304Assign4Repository;
 import com.example.assignment4.Model.Entities.Classroom;
@@ -17,6 +18,9 @@ public class AppViewModel extends AndroidViewModel {
     private COM304Assign4Repository appRepository;
     private LiveData<Integer> insertResult;
     private LiveData<List<Student>> allStudent;
+
+    private LiveData<String> profName;
+
 //    private LiveData<List<Professor>> allProfessors;
 //    private LiveData<List<Classroom>> allClassrooms;
 
@@ -64,6 +68,12 @@ public class AppViewModel extends AndroidViewModel {
 
     public void delete(Classroom classroom) {
         appRepository.delete(classroom);
+    }
+
+    // Professor Login
+    public MutableLiveData<Professor> ProfLogin(int profId, String profPass){
+
+        return  appRepository.profLogin(profId,profPass);
     }
 
     public LiveData<Integer> getInsertResult() {

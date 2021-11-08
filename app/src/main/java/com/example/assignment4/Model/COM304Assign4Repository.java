@@ -25,6 +25,7 @@ public class COM304Assign4Repository {
     private final LiveData<List<Classroom>> allClassrooms;
 
 
+
     public COM304Assign4Repository(Context context) {
         AppDatabase db = AppDatabase.getInstance(context);
         studentDao = db.studentDao();
@@ -87,6 +88,7 @@ public class COM304Assign4Repository {
     }
 
 
+
     // returns query result as LiveData object
     public LiveData<List<Student>> getAllStudents() {
         return allStudents;
@@ -96,6 +98,14 @@ public class COM304Assign4Repository {
     public LiveData<Integer> getInsertResult() {
         return insertResult;
     }
+
+    // returns professor as LiveData object
+    public MutableLiveData<Professor> profLogin(final int profId, final String profPass){
+        return professorDao.ProfLogin(profId, profPass);
+    }
+
+
+    //ASYNCS
 
     private void insertStudentAsync(final Student student) {
         new Thread(new Runnable() {
@@ -264,5 +274,9 @@ public class COM304Assign4Repository {
             }
         }).start();
     }
+
+
+
+
 
 }
