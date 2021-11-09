@@ -100,7 +100,7 @@ public class COM304Assign4Repository {
     }
 
     // returns professor as LiveData object
-    public MutableLiveData<Professor> profLogin(final int profId, final String profPass){
+    public Professor profLogin(final int profId, final String profPass){
         return professorDao.ProfLogin(profId, profPass);
     }
 

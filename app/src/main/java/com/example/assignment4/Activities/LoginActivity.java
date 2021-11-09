@@ -72,17 +72,18 @@ public class LoginActivity extends AppCompatActivity {
                                             " and Password!" ,
                                     Toast.LENGTH_SHORT).show();
                         }else{
-//                            MutableLiveData<Professor> curProf =appViewModel.ProfLogin(profIDInt,profPassStr).
-//                                    postValue();
-
-                        }
                             try{
+                                Professor curProf =appViewModel.ProfLogin(4,"CS4");
+//                                Toast.makeText(getApplicationContext(), "This professor is" +
+//                                                curProf,
+//                                                Toast.LENGTH_SHORT).show();
 
+                                //curProf.getFirstname() +" "+ curProf.getLastname()
                             } catch (NullPointerException npe){
                                 Toast.makeText(getApplicationContext(), "Exception Error Found" +profIDInt,
                                         Toast.LENGTH_SHORT).show();
                             }
-
+                        }
                     } catch (NumberFormatException nfe){
                         Toast.makeText(getApplicationContext(), "Could not parse String Text",
                             Toast.LENGTH_SHORT).show();
