@@ -33,5 +33,5 @@ public interface ProfessorDao {
     LiveData<Professor> DisplayProf(int profID);
 
     @Query("select * from Professor where professorId=:profID and password =:profPass")
-     public Professor ProfLogin(int profID, String profPass);
+    Professor ProfLogin(int profID, String profPass);
 }
