@@ -23,7 +23,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (INSTANCE == null) {
             //Create database object
             INSTANCE = Room.databaseBuilder(context,
-                    AppDatabase.class, DATABASE_NAME).build();
+                    AppDatabase.class, DATABASE_NAME).allowMainThreadQueries().build();
         }
         return INSTANCE;
     }
