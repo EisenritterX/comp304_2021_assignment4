@@ -13,6 +13,7 @@ import com.example.assignment4.Model.Entities.Professor;
 import com.example.assignment4.Model.Entities.Student;
 
 import java.util.List;
+import java.util.concurrent.Callable;
 
 public class COM304Assign4Repository {
 
@@ -100,12 +101,21 @@ public class COM304Assign4Repository {
     }
 
     // returns professor as LiveData object
-    public Professor profLogin(final int profId, final String profPass){
-        return professorDao.ProfLogin(profId, profPass);
+    public Professor profLogin(final int profId, final String profPass) throws InterruptedException {
+        return profLoginAsync(profId, profPass);
     }
 
-    private void profLoginAsync(final int profId, final String profPass){
-
+    private Professor profLoginAsync(final int profId, final String profPass) throws InterruptedException {
+        final Professor[] prof = new Professor[1];
+        Thread t= new Thread(new Runnable() {
+            @Override
+            public void run() {
+                prof[0] = professorDao.ProfLogin(profId, profPass);
+            }
+        });
+        t.start();
+        t.join();
+        return prof[0];
     }
 
     //ASYNCS

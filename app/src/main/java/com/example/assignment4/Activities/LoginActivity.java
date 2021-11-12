@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
                                         Toast.LENGTH_SHORT).show();
                             }
                         }
-                    } catch (NumberFormatException nfe){
+                    } catch (NumberFormatException | InterruptedException nfe){
                         Toast.makeText(getApplicationContext(), "Could not parse String Text",
                             Toast.LENGTH_SHORT).show();
                     }
