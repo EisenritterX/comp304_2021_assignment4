@@ -104,6 +104,9 @@ public class COM304Assign4Repository {
         return professorDao.ProfLogin(profId, profPass);
     }
 
+    private void profLoginAsync(final int profId, final String profPass){
+
+    }
 
     //ASYNCS
 

@@ -51,32 +51,35 @@ public class LoginActivity extends AppCompatActivity {
         login = findViewById(R.id.buttonLogin);
 
 
-
         login.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 // Getting Professor password
+                int profIDInt;
                 String profIDStr =  profID.getText().toString();
                 String profPassStr = profPassword.getText().toString();
+
+
+
+//                System.out.println(appViewModel.ProfLogin(profIDInt,profPassStr));
                 // Validation
                 if(profIDStr.isEmpty()||profPassStr.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Please enter Valid ID and Password",
                             Toast.LENGTH_SHORT).show();
                 }else{
-
                     try {
-                        int profIDInt = Integer.parseInt(profIDStr);
-                        if (appViewModel.ProfLogin(profIDInt,profPassStr)==null){
+                        profIDInt = Integer.parseInt(profIDStr);
+                        if (appViewModel.ProfLogin(profIDInt,profPassStr)==null){ //<----- This is the Major Error, it cannot call the function as the function itself crashes the app, unfortunately does not know why
                             Toast.makeText(getApplicationContext(), "This professor is not " +
                                             "in database. Make sure you have entered the correct ID" +
                                             " and Password!" ,
                                     Toast.LENGTH_SHORT).show();
                         }else{
                             try{
-                                Professor curProf =appViewModel.ProfLogin(4,"CS4");
-//                                Toast.makeText(getApplicationContext(), "This professor is" +
-//                                                curProf,
-//                                                Toast.LENGTH_SHORT).show();
+                                Professor curProf =appViewModel.ProfLogin(profIDInt,profPassStr);
+                                Toast.makeText(getApplicationContext(), "This professor is" +
+                                                curProf.getFirstname(),
+                                                Toast.LENGTH_SHORT).show();
 
                                 //curProf.getFirstname() +" "+ curProf.getLastname()
                             } catch (NullPointerException npe){
@@ -89,9 +92,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                     }
                 }
-
             }
-
         });
     }
 
