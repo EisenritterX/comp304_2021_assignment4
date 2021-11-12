@@ -71,7 +71,7 @@ public class AppViewModel extends AndroidViewModel {
     }
 
     // Professor Login
-    public Professor ProfLogin(int profId, String profPass){
+    public Professor ProfLogin(int profId, String profPass) throws InterruptedException {
 
         return appRepository.profLogin(profId,profPass);
     }
