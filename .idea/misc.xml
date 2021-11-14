@@ -3,11 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Centennial/2021/Mobile-Apps/A-4-Git/comp304_2021_assignment4/app/src/main/res/layout/activity_classroom_info.xml" value="0.19202898550724637" />
-        <entry key="..\:/Centennial/2021/Mobile-Apps/A-4-Git/comp304_2021_assignment4/app/src/main/res/layout/activity_classroom_update.xml" value="0.19202898550724637" />
-        <entry key="..\:/Centennial/2021/Mobile-Apps/A-4-Git/comp304_2021_assignment4/app/src/main/res/layout/activity_main.xml" value="0.19202898550724637" />
-        <entry key="..\:/Centennial/2021/Mobile-Apps/A-4-Git/comp304_2021_assignment4/app/src/main/res/layout/activity_student_info.xml" value="0.19202898550724637" />
-        <entry key="..\:/Centennial/2021/Mobile-Apps/A-4-Git/comp304_2021_assignment4/app/src/main/res/layout/activity_student_update.xml" value="0.19202898550724637" />
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/activity_classroom_info.xml" value="0.24592391304347827" />
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/activity_classroom_update.xml" value="0.24547101449275363" />
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/activity_login.xml" value="0.24592391304347827" />
@@ -15,6 +10,17 @@
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/activity_student_info.xml" value="0.33" />
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/activity_student_update.xml" value="0.33" />
         <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-master/app/src/main/res/layout/student_update.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_classroom_info.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_classroom_update.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_login.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_main.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_student_info.xml" value="0.22" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/activity_student_update.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/add_student_fragment.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/classroom_list_fragment.xml" value="0.14270833333333333" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/classroom_list_item.xml" value="0.14270833333333333" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/student_list_fragment.xml" value="0.17708333333333334" />
+        <entry key="..\:/Centennial/2021/Mobile-Apps/comp304_2021_assignment4-reid-branch/app/src/main/res/layout/student_list_item.xml" value="0.17708333333333334" />
       </map>
     </option>
   </component>
