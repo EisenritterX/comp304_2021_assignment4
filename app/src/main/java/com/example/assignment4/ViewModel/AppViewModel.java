@@ -76,6 +76,7 @@ public class AppViewModel extends AndroidViewModel {
         return appRepository.profLogin(profId,profPass);
     }
 
+
     public LiveData<Integer> getInsertResult() {
         return insertResult;
     }
