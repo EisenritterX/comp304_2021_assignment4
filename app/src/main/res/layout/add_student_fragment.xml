@@ -34,7 +34,7 @@
             android:layout_gravity="center">
 
             <EditText
-                android:id="@+id/editTextTextStudentId"
+                android:id="@+id/editTextStudentId"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -63,7 +63,7 @@
         <!--        Row 4-->
         <TableRow>
             <EditText
-                android:id="@+id/editTextTextFirstName"
+                android:id="@+id/editTextStudentFirstName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -92,7 +92,7 @@
         <!--        Row 6-->
         <TableRow>
             <EditText
-                android:id="@+id/editTextTextLastName"
+                android:id="@+id/editTextStudentLastName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -121,7 +121,7 @@
         <!--        Row 8-->
         <TableRow>
             <EditText
-                android:id="@+id/editTextTextDepartment"
+                android:id="@+id/editTextStudentDepartment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
@@ -139,7 +139,7 @@
             android:layout_gravity="center">
 
             <Button
-                android:id="@+id/update_student_button"
+                android:id="@+id/btnAddStudent"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center|center_vertical"

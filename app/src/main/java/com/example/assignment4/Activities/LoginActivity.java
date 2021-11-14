@@ -7,16 +7,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.bumptech.glide.Glide;
-import com.example.assignment4.Model.AppDatabase;
-import com.example.assignment4.Model.COM304Assign4Repository;
 import com.example.assignment4.Model.Entities.Professor;
 import com.example.assignment4.R;
 import com.example.assignment4.ViewModel.AppViewModel;
@@ -58,8 +52,6 @@ public class LoginActivity extends AppCompatActivity {
                 int profIDInt;
                 String profIDStr =  profID.getText().toString();
                 String profPassStr = profPassword.getText().toString();
-
-
 
 //                System.out.println(appViewModel.ProfLogin(profIDInt,profPassStr));
                 // Validation
