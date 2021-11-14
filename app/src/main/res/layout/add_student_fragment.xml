@@ -85,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/stuFName"
+                android:text="@string/stuLName"
                 android:textSize="@dimen/Heading" />
         </TableRow>
         <!--        Ends Row 5-->
@@ -114,7 +114,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/stuFName"
+                android:text="@string/stuDPT"
                 android:textSize="@dimen/Heading" />
         </TableRow>
         <!--        Ends Row 7-->
