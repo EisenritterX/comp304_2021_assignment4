@@ -75,7 +75,7 @@
                     android:layout_gravity="center|center_horizontal"
                     android:text="@string/btnLogin"
                     android:layout_span="2"
-                    app:backgroundTint="#FF2A2A"
+                    app:backgroundTint="@color/btnBGTint"
                     app:cornerRadius="20dp"
                     />
             </TableRow>
