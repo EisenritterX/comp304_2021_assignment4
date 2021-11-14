@@ -28,7 +28,7 @@ public class StudentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_info);
         // Find the list view
-        ListView lstStudents = (ListView) findViewById(R.id.listStudents);
+        //ListView lstStudents = (ListView) findViewById(R.id.listStudents);
 
         // Set View Model
         appViewModel = ViewModelProviders.of(this).get(AppViewModel.class);
