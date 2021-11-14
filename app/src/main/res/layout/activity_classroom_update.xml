@@ -12,36 +12,51 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Classroom ID"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintVertical_bias="0.118" />
 
     <EditText
         android:id="@+id/editTextTextClass_StudentId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Student ID"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="246dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/classroomUpdateSearchButton" />
 
     <Button
         android:id="@+id/classroomUpdateSearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:text="Search"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="41dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/searchClassroomUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginBottom="112dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Search"
-        tools:layout_editor_absoluteX="45dp"
-        tools:layout_editor_absoluteY="42dp" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextClass_StudentId"
+        app:layout_constraintEnd_toStartOf="@+id/classroomUpdateSearchButton"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
@@ -49,7 +64,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="68dp"
         android:text="Assign Student to Class:"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextClass_StudentId"
-        tools:layout_editor_absoluteX="100dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextClass_StudentId" />
+
+    <Button
+        android:id="@+id/assignClassButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="22dp"
+        android:text="Assign"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextClass_ClassroomId"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
