@@ -5,29 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextTextStudentId"
+    <Button
+        android:id="@+id/update_student_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="StudentId"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="100dp" />
-
-    <EditText
-        android:id="@+id/editTextTextFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="First Name"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextStudentId"
-        tools:layout_editor_absoluteX="100dp" />
+        android:layout_marginTop="36dp"
+        android:text="Update Student"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextClassroomId"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="122dp" />
 
     <EditText
         android:id="@+id/editTextTextLastName"
@@ -45,12 +32,24 @@
         android:id="@+id/editTextTextDepartment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:text="Department"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextLastName"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <EditText
+        android:id="@+id/editTextTextClassroomId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Classroom ID"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextProfessorId"
         tools:layout_editor_absoluteX="100dp" />
 
     <EditText
@@ -66,25 +65,44 @@
         tools:layout_editor_absoluteX="100dp" />
 
     <EditText
-        android:id="@+id/editTextTextClassroomId"
+        android:id="@+id/editTextTextFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Classroom ID"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextProfessorId"
+        android:text="First Name"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextStudentId"
         tools:layout_editor_absoluteX="100dp" />
 
-    <Button
-        android:id="@+id/update_student_button"
+    <EditText
+        android:id="@+id/editTextTextStudentId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="Update Student"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextClassroomId"
-        app:layout_constraintVertical_bias="0.266"
-        tools:layout_editor_absoluteX="122dp" />
+        android:layout_marginTop="220dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="StudentId"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <EditText
+        android:id="@+id/searchBarStudentUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Search"
+        tools:layout_editor_absoluteX="93dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <Button
+        android:id="@+id/searchbuttonStudentUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="90dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
