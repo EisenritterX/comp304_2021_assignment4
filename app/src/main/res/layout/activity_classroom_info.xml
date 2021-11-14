@@ -21,7 +21,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/classroomListFragment"
-            android:name="com.example.assignment4.Fragments.AddStudent"
+            android:name="com.example.assignment4.Fragments.ClassroomList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="0.5"
