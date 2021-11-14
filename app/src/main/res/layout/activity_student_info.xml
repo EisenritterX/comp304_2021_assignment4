@@ -3,155 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/studentIdLabel6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Classroom ID:"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdLabel5"
-        tools:layout_editor_absoluteX="52dp" />
 
-    <TextView
-        android:id="@+id/studentIdLabel4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Department:"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdLabel3"
-        tools:layout_editor_absoluteX="52dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/studentIdLabel5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Professor ID:"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdLabel4"
-        tools:layout_editor_absoluteX="52dp" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/addStudentFragment"
+            android:name="com.example.assignment4.Fragments.AddStudent"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:layout="@layout/add_student_fragment">
+        </androidx.fragment.app.FragmentContainerView>
 
-    <TextView
-        android:id="@+id/studentIdLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Student ID:"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        tools:layout_editor_absoluteX="52dp" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/studentListFragment"
+            android:name="com.example.assignment4.Fragments.DisplayAllStudents"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:layout="@layout/student_list_fragment">
+        </androidx.fragment.app.FragmentContainerView>
 
-    <TextView
-        android:id="@+id/studentIdLabel3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Last Name:"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdLabel2"
-        tools:layout_editor_absoluteX="52dp" />
 
-    <TextView
-        android:id="@+id/studentIdLabel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="First Name:"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdLabel"
-        tools:layout_editor_absoluteX="52dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="64dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/searchStudent"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="60dp"
-        android:text="Search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="175dp"
-        android:text="Student Info"
-        android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/searchStudent"
-        tools:layout_editor_absoluteX="52dp" />
-
-    <TextView
-        android:id="@+id/departmentInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel4"
-        app:layout_constraintTop_toBottomOf="@+id/lastNameInfo" />
-
-    <TextView
-        android:id="@+id/firstNameInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel2"
-        app:layout_constraintTop_toBottomOf="@+id/studentIdInfo" />
-
-    <TextView
-        android:id="@+id/lastNameInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel3"
-        app:layout_constraintTop_toBottomOf="@+id/firstNameInfo" />
-
-    <TextView
-        android:id="@+id/professorIdInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel5"
-        app:layout_constraintTop_toBottomOf="@+id/departmentInfo" />
-
-    <TextView
-        android:id="@+id/ClassroomIdInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel6"
-        app:layout_constraintTop_toBottomOf="@+id/professorIdInfo" />
-
-    <TextView
-        android:id="@+id/studentIdInfo"
-        android:layout_width="152dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintStart_toEndOf="@+id/studentIdLabel"
-        tools:layout_editor_absoluteY="338dp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
