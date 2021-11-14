@@ -65,12 +65,15 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 3:
                         intent = new Intent(getApplicationContext(), ClassroomActivity.class);
+                        startActivity(intent);
                         break;
                     case 4:
                         intent = new Intent(getApplicationContext(), ViewClassroomInfoActivity.class);
+                        startActivity(intent);
                         break;
                     case 5:
                         intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         break;
