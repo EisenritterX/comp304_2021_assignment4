@@ -11,4 +11,15 @@
         <item>View Classroom Infor</item>
         <item>Update Student Info</item>
     </string-array>
+    <string name="stuID">Student ID</string>
+    <string name="stuFName">First Name</string>
+    <string name="stuLName">Last Name</string>
+    <string name="stuDPT">Department</string>
+
+    <string name="profID">Prof ID</string>
+    <string name="classID">Class ID</string>
+
+
+<!--    Buttons-->
+    <string name="buttonAddStudent">Add Student</string>
 </resources>

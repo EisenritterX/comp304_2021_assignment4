@@ -5,7 +5,6 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.example.assignment4.Model.COM304Assign4Repository;
 import com.example.assignment4.Model.Entities.Classroom;
@@ -82,7 +81,7 @@ public class AppViewModel extends AndroidViewModel {
     }
 
     //returns query results as live data object
-    LiveData<List<Student>> getAllStudent() {
+    public LiveData<List<Student>> getAllStudent() {
         return allStudent;
     }
 }

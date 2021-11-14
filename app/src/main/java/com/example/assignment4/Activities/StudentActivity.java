@@ -1,12 +1,8 @@
 package com.example.assignment4.Activities;
 
-import android.content.Intent;
+
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -15,7 +11,6 @@ import com.example.assignment4.R;
 import com.example.assignment4.ViewModel.AppViewModel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class StudentActivity extends AppCompatActivity {
 
@@ -27,17 +22,15 @@ public class StudentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_info);
+        // get the application view model
+        appViewModel = ViewModelProviders.of(this).get(AppViewModel.class);
         // Find the list view
-        ListView lstStudents = (ListView) findViewById(R.id.listStudents);
+        //ListView lstStudents = (ListView) findViewById(R.id.listStudents);
 
         // Set View Model
-        appViewModel = ViewModelProviders.of(this).get(AppViewModel.class);
-
-
 
         /*students = new ArrayList<String>(Arrays.asList(getResources().
                 getStringArray(R.array.Students)));*/
-
 
         // POPULATE LIST
 
@@ -48,6 +41,18 @@ public class StudentActivity extends AppCompatActivity {
                 this, android.R.layout.simple_list_item_1, students
         );
 
+//        //if the LiveData already has data it will delivered
+//        // to the observer
+//
+//        appViewModel.getAllStudent().observe(this, new Observer<List<Student>>() {
+//            @Override
+//            public void onChanged(@Nullable List<Student> students) {
+//                if(students!=null){
+//                    lstStudents.setAdapter(activitiesArrayAdapter);
+//                }
+//
+//            }
+//        });
        /* // Attaching ArrayAdapter to list view
         lstStudents.setAdapter(studentsArrayAdapter);*/
 

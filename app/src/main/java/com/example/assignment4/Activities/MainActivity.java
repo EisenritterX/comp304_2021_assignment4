@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         intent = new Intent(getApplicationContext(), StudentActivity.class);
+                        startActivity(intent);
                         break;
                     case 2:
                         intent = new Intent(getApplicationContext(), StudentActivity.class);
