@@ -7,13 +7,18 @@ import androidx.room.PrimaryKey;
 public class Student {
     @PrimaryKey(autoGenerate = true)
     private int studentId;
-    private int professorId, classroomId;
+    int professorId;
+    int classroomId;
     private String firstname, lastname, department;
 
-    public Student(String firstname, String lastname, String department) {
+    public Student(int studentId, String firstname, String lastname, String department,
+                   int professorId, int classroomId) {
+        this.studentId = studentId;
         this.firstname = firstname;
         this.lastname = lastname;
         this.department = department;
+        this.professorId = professorId;
+        this.classroomId = classroomId;
     }
 
     public void setStudentId(int studentId) {
@@ -51,4 +56,14 @@ public class Student {
         return department;
     }
     public void setDepartment(String dpt) {this.department = dpt;}
+
+    @Override
+    public String toString(){
+        return "Student ID: " + studentId + "\n" +
+                "Name: "+firstname+" "+lastname+"\n"+
+                "Department: " + department +"\n"+
+                "Professor: " +professorId+"\n"+
+              "Classroom: " + classroomId +"\n";
+    }
+
 }

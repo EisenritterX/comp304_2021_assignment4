@@ -2,7 +2,8 @@ package com.example.assignment4.Activities;
 
 
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
@@ -16,45 +17,33 @@ public class StudentActivity extends AppCompatActivity {
 
     private ArrayList<String> students;
     private AppViewModel appViewModel;
-
+    EditText studentID, studentFName, studentLName, studentDept;
+    Button addStudent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_info);
-        // get the application view model
         appViewModel = ViewModelProviders.of(this).get(AppViewModel.class);
-        // Find the list view
-        //ListView lstStudents = (ListView) findViewById(R.id.listStudents);
 
-        // Set View Model
-
-        /*students = new ArrayList<String>(Arrays.asList(getResources().
-                getStringArray(R.array.Students)));*/
-
-        // POPULATE LIST
-
-        // This is the array adapter, it takes the context of the activity as a
-        // first parameter, the type of list view as a second parameter and your
-        // array as a third parameter.
-        ArrayAdapter<String> activitiesArrayAdapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, students
-        );
-
-//        //if the LiveData already has data it will delivered
-//        // to the observer
+//        studentID = findViewById(R.id.editTextStudentId);
+//        studentFName = findViewById(R.id.editTextStudentFirstName);
+//        studentLName = findViewById(R.id.editTextStudentLastName);
+//        studentDept = findViewById(R.id.editTextStudentDepartment);
 //
-//        appViewModel.getAllStudent().observe(this, new Observer<List<Student>>() {
+//        addStudent = findViewById(R.id.btnAddStudent);
+//        addStudent.setOnClickListener(new View.OnClickListener() {
 //            @Override
-//            public void onChanged(@Nullable List<Student> students) {
-//                if(students!=null){
-//                    lstStudents.setAdapter(activitiesArrayAdapter);
-//                }
-//
+//            public void onClick(View v) {
+//                int studentIDInt;
+//                studentIDInt = Integer.parseInt(studentID.getText().toString());
+//                newStudent = new Student(studentIDInt, studentFName.getText().toString(),
+//                        studentLName.getText().toString(),studentDept.getText().toString(),0,0);
+//                appViewModel.insert(newStudent);
+//                Toast.makeText(getApplicationContext(), newStudent.toString(),
+//                        Toast.LENGTH_SHORT).show();
 //            }
 //        });
-       /* // Attaching ArrayAdapter to list view
-        lstStudents.setAdapter(studentsArrayAdapter);*/
 
     }
 }
