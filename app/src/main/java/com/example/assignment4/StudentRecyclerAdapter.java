@@ -49,13 +49,13 @@ public class StudentRecyclerAdapter extends  RecyclerView.Adapter<StudentRecycle
         TableLayout studentLayout;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            stuID = itemView.findViewById(R.id.ItemStudentID);
+            /*stuID = itemView.findViewById(R.id.ItemStudentID);
             stuFName = itemView.findViewById(R.id.ItemStudentFname);
             stuLName = itemView.findViewById(R.id.ItemStudentLname);
             stuDept = itemView.findViewById(R.id.ItemStudentDept);
             stuProfID = itemView.findViewById(R.id.ItemStudentProfID);
             stuClassID = itemView.findViewById(R.id.ItemStudentClassID);
-            studentLayout = itemView.findViewById(R.id.ItemStudentTable);
+            studentLayout = itemView.findViewById(R.id.ItemStudentTable);*/
         }
     }
     @NonNull

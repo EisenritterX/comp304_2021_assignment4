@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 1:
-                        if(loginInfo != null)
+                        if(loginInfo.size() != 0)
                         {
                             intent = new Intent(getApplicationContext(), StudentActivity.class);
                             startActivity(intent);
@@ -80,14 +80,14 @@ public class MainActivity extends AppCompatActivity {
                             break;
                         }
                     case 2:
-                        if(loginInfo != null) {
+                        if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), StudentActivity.class);
                             startActivity(intent);
                         }
                         else
                         break;
                     case 3:
-                        if(loginInfo != null) {
+                        if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), ClassroomActivity.class);
                             startActivity(intent);
                         }
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                         else
                         break;
                     case 5:
-                        if(loginInfo != null) {
+                        if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
                             startActivity(intent);
                         }
