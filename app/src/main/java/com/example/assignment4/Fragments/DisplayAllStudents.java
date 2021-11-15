@@ -2,6 +2,7 @@ package com.example.assignment4.Fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ public class DisplayAllStudents extends Fragment {
 
 //        studentsList = getView().findViewById(R.id.recViewStudent);
         txtDisplayStudents = getView().findViewById(R.id.txtDisplayStudents);
+        txtDisplayStudents.setMovementMethod(new ScrollingMovementMethod());
 
 
         appViewModel.getAllStudent().observe(getViewLifecycleOwner(), new Observer<List<Student>>() {
