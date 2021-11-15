@@ -17,10 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.LoginActivity"></activity>
-        <activity android:name=".Activities.StudentActivity"></activity>
+        <activity android:name=".Activities.AddStudentActivity"></activity>
         <activity android:name=".Activities.ClassroomActivity"></activity>
         <activity android:name=".Activities.ViewClassroomInfoActivity"></activity>
-        <activity android:name=".Activities.UpdateInfoActivity"></activity>
+        <activity android:name=".Activities.ModifyStudentActivity"></activity>
     </application>
 
 </manifest>

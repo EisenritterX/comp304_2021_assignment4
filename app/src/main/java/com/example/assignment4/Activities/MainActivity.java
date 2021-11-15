@@ -57,11 +57,11 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), StudentActivity.class);
+                        intent = new Intent(getApplicationContext(), AddStudentActivity.class);
                         startActivity(intent);
                         break;
                     case 2:
-                        intent = new Intent(getApplicationContext(), StudentActivity.class);
+                        intent = new Intent(getApplicationContext(), AddStudentActivity.class);
                         startActivity(intent);
                         break;
                     case 3:
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 5:
-                        intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
+                        intent = new Intent(getApplicationContext(), ModifyStudentActivity.class);
                         startActivity(intent);
                         break;
                     default:
