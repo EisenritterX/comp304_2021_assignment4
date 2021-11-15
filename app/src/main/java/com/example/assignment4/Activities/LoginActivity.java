@@ -9,11 +9,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.preference.PreferenceManager;
 
 import com.bumptech.glide.Glide;
 import com.example.assignment4.Model.Entities.Professor;
 import com.example.assignment4.R;
 import com.example.assignment4.ViewModel.AppViewModel;
+import android.content.SharedPreferences;
+
+import java.util.HashSet;
+import java.util.Set;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -21,6 +26,13 @@ public class LoginActivity extends AppCompatActivity {
     EditText profID, profPassword;
     Button login;
     Professor newProf;
+
+    Set<String> setData = new HashSet<String>();
+    //preferences data variable
+    SharedPreferences myPref;
+    //variable to modify preference data
+    SharedPreferences.Editor prefEditor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +55,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Login Button and its functionality
         login = findViewById(R.id.buttonLogin);
+
 
 
         login.setOnClickListener(new View.OnClickListener(){
@@ -72,6 +85,16 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "This professor is" +
                                                 curProf.getFirstname(),
                                                 Toast.LENGTH_SHORT).show();
+
+                                //Added Shared Preferences to store user info
+                                myPref = getSharedPreferences("info", MODE_PRIVATE);
+                                //check what's in shared preferences named data
+                                setData = myPref.getStringSet("data",new HashSet<String>());
+                                prefEditor= myPref.edit();
+                                setData.add(profIDStr);
+                                //add the username to shared preferences variable named id
+                                prefEditor.putStringSet("id",setData);
+                                prefEditor.commit();
 
                                 //curProf.getFirstname() +" "+ curProf.getLastname()
                             } catch (NullPointerException npe){

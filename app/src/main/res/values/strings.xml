@@ -5,8 +5,8 @@
     <string name="btnLogin">Login</string>
     <string-array name="Activities">
         <item>Login</item>
-        <item>Add/View Student Info</item>
-        <item>Modify/View Student Info</item>
+        <item>Modify Student Info</item>
+        <item>View Student Info</item>
         <item>Modify Class Room Data</item>
         <item>View Classroom Infor</item>
         <item>Update Student Info</item>

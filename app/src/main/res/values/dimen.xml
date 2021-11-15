@@ -2,5 +2,4 @@
 <resources>
     <dimen name="Heading">18sp</dimen>
     <dimen name="Entry">14sp</dimen>
-    <dimen name="Data">10sp</dimen>
 </resources>

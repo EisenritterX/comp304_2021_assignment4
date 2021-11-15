@@ -12,21 +12,23 @@
         android:orientation="vertical">
 
         <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/addStudentFragment"
+            android:name="com.example.assignment4.Fragments.AddStudent"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:layout="@layout/add_student_fragment">
+        </androidx.fragment.app.FragmentContainerView>
+
+        <androidx.fragment.app.FragmentContainerView
             android:id="@+id/studentListFragment"
             android:name="com.example.assignment4.Fragments.DisplayAllStudents"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="0.5"
-            tools:layout="@layout/student_list_fragment"></androidx.fragment.app.FragmentContainerView>
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            tools:layout="@layout/student_list_fragment">
+        </androidx.fragment.app.FragmentContainerView>
 
-        <!--<androidx.fragment.app.FragmentContainerView
-            android:id="@+id/classroomListFragment"
-            android:name="com.example.assignment4.Fragments.ClassroomList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="0.5"
-            tools:layout="@layout/classroom_list_fragment"></androidx.fragment.app.FragmentContainerView>
--->
 
     </LinearLayout>
 

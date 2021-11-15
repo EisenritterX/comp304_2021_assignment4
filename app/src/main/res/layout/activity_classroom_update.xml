@@ -5,80 +5,44 @@
     android:layout_width="match_parent"
              android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextTextClass_ClassroomId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Classroom ID"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.118" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editTextTextClass_StudentId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Student ID"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classroomUpdateSearchButton" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/studentListFragment"
+            android:name="com.example.assignment4.Fragments.DisplayAllStudents"
+            android:layout_width="match_parent"
+            android:layout_height="271dp"
+            android:layout_weight="0.5"
+            tools:layout="@layout/student_list_fragment"></androidx.fragment.app.FragmentContainerView>
 
-    <Button
-        android:id="@+id/classroomUpdateSearchButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:text="Search"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="52dp"
+            android:text="Assign Student to Class:" />
 
-    <EditText
-        android:id="@+id/searchClassroomUpdate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginBottom="112dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Search"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextClass_StudentId"
-        app:layout_constraintEnd_toStartOf="@+id/classroomUpdateSearchButton"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toStartOf="parent" />
+        <EditText
+            android:id="@+id/editTextTextClass_ClassroomId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Classroom ID" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:text="Assign Student to Class:"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextClass_StudentId" />
+        <Button
+            android:id="@+id/assignClassButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="22dp"
+            android:text="Assign" />
 
-    <Button
-        android:id="@+id/assignClassButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginLeft="160dp"
-        android:layout_marginTop="22dp"
-        android:text="Assign"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextClass_ClassroomId"
-        app:layout_constraintVertical_bias="0.0" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

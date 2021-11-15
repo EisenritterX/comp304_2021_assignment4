@@ -1,6 +1,7 @@
 package com.example.assignment4.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,10 +15,14 @@ import com.example.assignment4.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
     private Intent intent;
     private ArrayList<String> activities;
+
+    private SharedPreferences myPreference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         activities = new ArrayList<String>(Arrays.asList(getResources().
                 getStringArray(R.array.Activities)));
+
 
 
         // POPULATE LIST
@@ -47,9 +53,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selectedItem = activities.get(position);
+                //Added Shared Preferences
+                myPreference = getSharedPreferences("info", MODE_PRIVATE);
+                Set<String> loginInfo = myPreference.getStringSet("id",new HashSet<String>());
                 // Debug Toast
                 Toast.makeText(getApplicationContext(), "Activities Selected : " +
                         position + selectedItem, Toast.LENGTH_SHORT).show();
+
+
                 // Sent Intent
                 switch (position) {
                     case 0:
@@ -57,24 +68,44 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), AddStudentActivity.class);
-                        startActivity(intent);
-                        break;
+                        if(loginInfo != null)
+                        {
+                            intent = new Intent(getApplicationContext(), StudentActivity.class);
+                            startActivity(intent);
+                            Toast.makeText(getApplicationContext(), "You are logged in as : " +
+                                    loginInfo, Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(), "You are not logged in", Toast.LENGTH_SHORT).show();
+                            break;
+                        }
                     case 2:
-                        intent = new Intent(getApplicationContext(), AddStudentActivity.class);
-                        startActivity(intent);
+                        if(loginInfo != null) {
+                            intent = new Intent(getApplicationContext(), StudentActivity.class);
+                            startActivity(intent);
+                        }
+                        else
                         break;
                     case 3:
-                        intent = new Intent(getApplicationContext(), ClassroomActivity.class);
-                        startActivity(intent);
+                        if(loginInfo != null) {
+                            intent = new Intent(getApplicationContext(), ClassroomActivity.class);
+                            startActivity(intent);
+                        }
+                        else
                         break;
                     case 4:
-                        intent = new Intent(getApplicationContext(), ViewClassroomInfoActivity.class);
-                        startActivity(intent);
+                        if(loginInfo != null) {
+                            intent = new Intent(getApplicationContext(), ViewClassroomInfoActivity.class);
+                            startActivity(intent);
+                        }
+                        else
                         break;
                     case 5:
-                        intent = new Intent(getApplicationContext(), ModifyStudentActivity.class);
-                        startActivity(intent);
+                        if(loginInfo != null) {
+                            intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
+                            startActivity(intent);
+                        }
+                        else
                         break;
                     default:
                         break;

@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,7 +28,7 @@ public class AddStudent extends Fragment {
                              Bundle savedInstanceState){
         View view = inflater.inflate(R.layout.add_student_fragment, container, false);
         Toast.makeText(getContext(),"AddStudent onCreateView Started",Toast.LENGTH_LONG).show();
-        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
+
 
 
         return view;
