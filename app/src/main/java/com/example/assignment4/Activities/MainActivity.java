@@ -84,29 +84,37 @@ public class MainActivity extends AppCompatActivity {
                             intent = new Intent(getApplicationContext(), StudentActivity.class);
                             startActivity(intent);
                         }
-                        else
-                        break;
+                        else {
+                            Toast.makeText(getApplicationContext(), "You are not logged in", Toast.LENGTH_SHORT).show();
+                            break;
+                        }
                     case 3:
                         if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), ClassroomActivity.class);
                             startActivity(intent);
                         }
-                        else
-                        break;
+                        else {
+                            Toast.makeText(getApplicationContext(), "You are not logged in", Toast.LENGTH_SHORT).show();
+                            break;
+                        }
                     case 4:
-                        if(loginInfo != null) {
+                        if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), ViewClassroomInfoActivity.class);
                             startActivity(intent);
                         }
-                        else
-                        break;
+                        else {
+                            Toast.makeText(getApplicationContext(), "You are not logged in", Toast.LENGTH_SHORT).show();
+                            break;
+                        }
                     case 5:
                         if(loginInfo.size() != 0) {
                             intent = new Intent(getApplicationContext(), UpdateInfoActivity.class);
                             startActivity(intent);
                         }
-                        else
-                        break;
+                        else {
+                            Toast.makeText(getApplicationContext(), "You are not logged in", Toast.LENGTH_SHORT).show();
+                            break;
+                        }
                     default:
                         break;
                 }
